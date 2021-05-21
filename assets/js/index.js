@@ -16,6 +16,7 @@ btnSnak.addEventListener('click', () => {
 });
 
 const getProducts = (categoria) => {
+  let total = 0;
 
   while (container.hasChildNodes()) {
     container.removeChild(container.lastChild);
@@ -52,11 +53,12 @@ const getProducts = (categoria) => {
         container.appendChild(btnPurchase); //insertamos en el container ese botón
 
         btnPurchase.addEventListener('click', () => { // Al botón le asignamos un evento de escucha
-          const total = product.price * cantidad.value; // Cantidad * precio
-          console.log(total);
-          /*  */
+          const subtotal = product.price * cantidad.value; // Cantidad * precio
+          total += subtotal;
+          /* PREGUNTAR SI YA HAY ALGO EN EL LOCAL */
+          /* SI HAY, TRAERLO... ETC */
+          localStorage.setItem('Total', `${total}`);
         });
-
       } else {
         let p = document.createElement('p');
         p.textContent = 'No hay en stock';
