@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+body {
+    background-color: #fff; 
+}
+
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    background-color:  rgb(147, 144, 158);
+  }
+  
+  nav ul li {
+    padding: 0 1rem;
+    display: inline-block;
+    list-style: none;
+    
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    
+}
+
+.shop-icon {
+  position: relative;
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: rgb(250, 245, 245);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+
+
+.banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    background-color: rgb(236, 234, 79)
+  }
+
+  .img-banner {
+    width: 90%;
+    align-items: center;
+  }
+
+  .products {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: rgba(174, 154, 182, 0.742);
+    padding: 0.8rem;
+    margin: 0.8rem;
+  }
+ 
+  .promotion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: rgba(113, 58, 134, 0.742);
+    padding: 0.8rem;
+    margin: 0.8rem;
+  }
+  #imgCar1, #imgCar2, #imgCar3, #imgCar4 {
+    /* display: flex; */
+      width: 400px;
+      height: auto;
+  }
+
+  button {
+    border: 1px, solid, darkgray;
+    border-radius: 4px;
+    padding: 5px;
+  }
+
+  button:hover {
+    background-color: rgb(38, 20, 105);
+    color: #fff;
+  }
+
+  .section3 {
+background-color: pink;
+  }
+
+  #imgCar1Related, #imgCar2Related, #imgCar3Related, #imgCar4Related {
+    width: 300px;
+      height: 170px;
+      padding: 5px;
+  }
+
+  footer {
+    width: 100%;
+    height: 95px;
+    color: #060A24;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    letter-spacing: 0;
+    line-height: 1.75em;
+}
+
+footer p {
+    font-family: 'IBM Plex Mono';
+    font-size: 1em;
+    margin-left: 30.9%;
+    width: 100%;
+}
+    
+footer ul li  {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    padding: 18%;
+}
+
+footer i  {
+    font-size: 1.125em;
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: regular;
+    color: #060A24;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    list-style: none;
+    margin-left: 60%;
+}
+
+
+
