@@ -57,6 +57,7 @@ const getProducts = (categoria) => {
           total += subtotal;
           /* PREGUNTAR SI YA HAY ALGO EN EL LOCAL */
           /* SI HAY, TRAERLO... ETC */
+          
           localStorage.setItem('Total', `${total}`);
         });
       } else {
