@@ -19,23 +19,25 @@ nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+            
     padding: 0.8rem;
     margin: 0.8rem;
-    background-color:  rgb(147, 144, 158);
+    background-color:  rgb(177, 9, 127);
   }
   
   nav ul li {
     padding: 0 1rem;
     display: inline-block;
-    list-style: none;
-    
+   
+    font-family: 'Oswald', sans-serif;
 }
 
-#logo {
-    width: 100px;
-    height: auto;
-    
+.logo {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
 }
+    
 
 .shop-icon {
   position: relative;
@@ -49,106 +51,142 @@ nav {
   position: absolute;
 }
 
+.toggler {
+  display: none;
+}
+
+/* .menu {
+  text-decoration: none;
+    color:rgb(250, 245, 245)
+} */
+
+ .search-input {
+  border-radius: 12px;
+  padding: 1emx;
+  width: 40em;
+  height: 4em;
+  margin: 0.8rem; 
+} 
+
+.search-input:hover {
+  border: 2px solid rgb(177, 9, 127);
+}
+  
 
 .banner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0.8rem;
+    padding: 1rem;
     margin: 0.8rem;
-    background-color: rgb(236, 234, 79)
+    border: 2px solid gray;
   }
 
   .img-banner {
-    width: 90%;
+    width: 100%;
     align-items: center;
+    align-content: center;
+    justify-content: center;
   }
 
   .products {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: rgba(174, 154, 182, 0.742);
+    
+    border: 2px solid gray;
     padding: 0.8rem;
     margin: 0.8rem;
-  }
- 
-  .promotion {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: rgba(113, 58, 134, 0.742);
-    padding: 0.8rem;
-    margin: 0.8rem;
-  }
-  #imgCar1, #imgCar2, #imgCar3, #imgCar4 {
-    /* display: flex; */
-      width: 400px;
-      height: auto;
   }
 
+  h1 {
+    font-family: 'Playfair Display', serif;
+    /* -webkit-transform: rotate(-30deg); 
+    -moz-transform: rotate(-30deg); */
+    color: rgb(177, 9, 127);
+    font-size: 2.2em;
+  }
+
+  .allProducts {
+    display: grid;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 100px 100px 100px; 
+    /* grid-gap: 5px; */
+    grid-column-gap: 2em;
+  }
+ 
   button {
-    border: 1px, solid, darkgray;
-    border-radius: 4px;
-    padding: 5px;
+    border: none;
+    border-radius: 12px;
+    padding: 8px;
+    width: 8em;
+    margin: 0.8rem; 
+    background-color: rgb(247, 192, 201);
+    color:rgb(177, 9, 127);
+    font-family: 'Varela Round', sans-serif;
   }
 
   button:hover {
-    background-color: rgb(38, 20, 105);
+    background-color: rgb(177, 9, 127);
     color: #fff;
   }
+  
+  .productsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.8rem;
+    margin: 0.8rem;
 
-  .section3 {
-background-color: pink;
   }
 
-  #imgCar1Related, #imgCar2Related, #imgCar3Related, #imgCar4Related {
-    width: 300px;
-      height: 170px;
-      padding: 5px;
-  }
+
+  /* footer */
 
   footer {
-    width: 100%;
-    height: 95px;
-    color: #060A24;
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+    /* grid-template-columns: 100px 100px 100px;  */
+    /* grid-gap: 5px; */
+    grid-row-gap: 2em;
+    /* width: 100%;
+    height: 100px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    align-items: center;
-    letter-spacing: 0;
-    line-height: 1.75em;
+    align-items: center; */
+    padding: 0.8rem;
+    margin: 0.8rem;
+    background-color: rgb(177, 9, 127);
 }
 
 footer p {
-    font-family: 'IBM Plex Mono';
     font-size: 1em;
-    margin-left: 30.9%;
+    /* margin-left: 30.9%; */
+    /* align-items: center;
+    align-content: center;
+    justify-content: center; */
     width: 100%;
+    color:rgb(250, 245, 245)
 }
     
 footer ul li  {
     list-style: none;
-    display: flex;
+    /* display: flex;
     flex-wrap: nowrap;
-    align-content: flex-end;
+    align-content: flex-end; */
     padding: 18%;
-}
+  }
+   
 
-footer i  {
-    font-size: 1.125em;
-    font-family: 'Font Awesome 5 Brands';
-    font-weight: regular;
-    color: #060A24;
-}
-
-footer ul {
+/* footer ul {
     display: flex;
     align-items: center;
-    flex-flow: row nowrap;
-    list-style: none;
-    margin-left: 60%;
+    flex-flow: row wrap; 
+    justify-content: center;
+    align-content: center;
+    align-items: center; 
+    margin-left: 60%; 
+} */
+
+.icon-color {
+  color:rgb(250, 245, 245)
 }
-
-
 

@@ -34,25 +34,14 @@
 
     .logo {
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
     }
 
     
      /* -- here ends navbar -- */
 
-     header section {
-        width: 95%;
-        height: 283px;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        padding-left: 5%;
-        color: #060A24;
-       background-color: pink;
-    }
+    
 
     
 
@@ -66,7 +55,7 @@
         letter-spacing: 0;
         background-color: rgb(177, 9, 127);
     }
-    }
+   
     
     footer p {
         font-family: 'IBM Plex Mono';

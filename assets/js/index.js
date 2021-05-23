@@ -1,9 +1,10 @@
 import products from './db.js';
 
-const container = document.getElementById('promo');
+const container = document.getElementById('container'); //cambio promo x container!!
 const btnChocolate = document.getElementById('chocolate');
 const btnchicle = document.getElementById('chicle');
 const btnSnak = document.getElementById('snack');
+
 
 btnChocolate.addEventListener('click', () => {
   getProducts('chocolate');
@@ -16,15 +17,16 @@ btnSnak.addEventListener('click', () => {
 });
 
 const getProducts = (categoria) => {
-  let total = 0;
 
   while (container.hasChildNodes()) {
     container.removeChild(container.lastChild);
   }
 
+  let total = 0;
   products.forEach(product => {
     if (product.category === categoria) {
       let image = document.createElement('img');
+      image.setAttribute('class', 'imagen_chica');
       image.src = product.image;
       container.appendChild(image);
 
@@ -41,6 +43,7 @@ const getProducts = (categoria) => {
 
         let count = document.createElement('input'); // Crea un input
         count.setAttribute('type', 'number'); // A ese input de asigna un atributo (type="number")
+        //count.setAttribute('max', product.stock )
         count.setAttribute('id', `count_${product.id}`); // A ese input de doy un id (id="product_NUMERO")
         count.setAttribute('value', 1); // A ese input le asignamois el valor 1
         container.appendChild(count); // insertamos en el container ese input
@@ -53,13 +56,18 @@ const getProducts = (categoria) => {
         container.appendChild(btnPurchase); //insertamos en el container ese botón
 
         btnPurchase.addEventListener('click', () => { // Al botón le asignamos un evento de escucha
-          const subtotal = product.price * cantidad.value; // Cantidad * precio
-          total += subtotal;
-          /* PREGUNTAR SI YA HAY ALGO EN EL LOCAL */
-          /* SI HAY, TRAERLO... ETC */
-          
-          localStorage.setItem('Total', `${total}`);
+          let subtotal = product.price * cantidad.value; // Cantidad * precio
+          let getLocalStorage = localStorage.getItem('total');
+          if (getLocalStorage) {
+            total = Number(getLocalStorage) + Number(subtotal);
+            console.log(total);
+          } else {
+            total += subtotal;
+          }
+          /* console.log(total); */
+          localStorage.setItem('total', total);
         });
+
       } else {
         let p = document.createElement('p');
         p.textContent = 'No hay en stock';
